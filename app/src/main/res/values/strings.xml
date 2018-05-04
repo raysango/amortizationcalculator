@@ -1,0 +1,11 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Amortization Calculator</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="interest_rate">Interest Rate %</string>
+    <string name="term">Years</string>
+    <string name="calculate">Calculate</string>
+    <string name="error">All values must be entered to calculate</string>
+    <string name="monthly_payment">Monthly Payment is <xliff:g id="payment" example="$20">%s</xliff:g></string>
+    <string name="total_interest">Total Interest Paid is <xliff:g id="total_interest" example="$20">%s</xliff:g></string>
+    <string name="total_paid">Total Amount Paid is <xliff:g id="total_paid" example="$20">%s</xliff:g></string>
+</resources>
