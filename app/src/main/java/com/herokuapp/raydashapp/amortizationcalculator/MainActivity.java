@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -32,7 +30,10 @@ public class MainActivity extends AppCompatActivity {
             int loanAmount = Integer.parseInt(loanAmountView.getText().toString());
             float interestRate = Float.parseFloat(interestRateView.getText().toString());
             int term = Integer.parseInt(termView.getText().toString()) * 12;
-
+            if (loanAmount <= 0 || interestRate <= 0 || term <= 0) {
+                errorMessageView.setText(error);
+                return;
+            }
             float monthlyRate = interestRate / 1200;
             double numerator = monthlyRate * Math.pow((1 + monthlyRate), term);
             double denominator = Math.pow((1 + monthlyRate), term) - 1;
